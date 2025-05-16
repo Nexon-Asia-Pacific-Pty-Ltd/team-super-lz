@@ -1,9 +1,6 @@
 ---
 name: 02 Azure Landing Zones Continuous Delivery
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
     inputs:
       terraform_action:
@@ -22,7 +19,7 @@ on:
 
 jobs:
   plan_and_apply:
-    uses: Nexon-Asia-Pacific-Pty-Ltd/team-super-lz-templates/.github/workflows/cd-template.yaml@main
+    uses: Nexon-Asia-Pacific-Pty-Ltd/team-super-lz/.github/workflows/cd-template.yaml@main
     name: 'CD'
     permissions:
       id-token: write
